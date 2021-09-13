@@ -1,5 +1,5 @@
 {
-	"name": "bbcode-parser-template",
+	"name": "@thoughtsunificator/bbcode-parser-template",
 	"scripts": {
 		"test": "nodeunit-esm",
 		"generate-docs": "jsdoc --configure .jsdoc.json --verbose",
