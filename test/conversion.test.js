@@ -1,5 +1,10 @@
+import assert from "assert"
 import { Conversion } from "../index.js"
 
-export function instance(test) {
-	test.done()
-}
+describe("conversion", () => {
+
+	it("instance", () => {
+
+	})
+
+})

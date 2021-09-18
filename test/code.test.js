@@ -1,5 +1,10 @@
+import assert from "assert"
 import { Code } from "../index.js"
 
-export function instance(test) {
-	test.done()
-}
+describe("code", () => {
+
+	it("instance", () => {
+
+	})
+
+})

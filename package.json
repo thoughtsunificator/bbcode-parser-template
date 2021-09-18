@@ -1,7 +1,7 @@
 {
 	"name": "@thoughtsunificator/bbcode-parser-template",
 	"scripts": {
-		"test": "nodeunit-esm",
+		"test": "mocha",
 		"generate-docs": "jsdoc --configure .jsdoc.json --verbose",
 		"lint": "eslint src/**/*.js"
 	},
@@ -9,7 +9,7 @@
 		"docdash": "^1.2.0",
 		"eslint": "^7.0.0",
 		"jsdoc": "^3.6.6",
-		"nodeunit-esm": "^1.0.3"
+		"mocha": "^9.1.1"
 	},
 	"type": "module",
 	"main": "index.js",

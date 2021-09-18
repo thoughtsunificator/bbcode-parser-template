@@ -1,5 +1,10 @@
+import assert from "assert"
 import { Template } from "../index.js"
 
-export function instance(test) {
-	test.done()
-}
+describe("template", () => {
+
+	it("instance", () => {
+
+	})
+
+})
