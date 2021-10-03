@@ -1,4 +1,4 @@
-# bbcode-parser-template [![Build Status](https://travis-ci.com/thoughtsunificator/bbcode-parser-template.svg?branch=master)](https://travis-ci.com/thoughtsunificator/bbcode-parser-template)
+# bbcode-parser-template
 
 Template system for [bbcode-parser](https://github.com/thoughtsunificator/bbcode-parser).
 
