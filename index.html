@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>Home - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/thoughtsunificator/bbcode-parser-template" target="_blank" >Github</a></h2><h3>Classes</h3><ul><li><a href="module-code.Code.html">Code</a><ul class='methods'><li data-type='method'><a href="module-code.Code.html#.testNode">testNode</a></li><li data-type='method'><a href="module-code.Code.html#.beforeCreateBBNode">beforeCreateBBNode</a></li><li data-type='method'><a href="module-code.Code.html#.createBBNode">createBBNode</a></li><li data-type='method'><a href="module-code.Code.html#.beforeCreateNode">beforeCreateNode</a></li><li data-type='method'><a href="module-code.Code.html#.appendBBNode">appendBBNode</a></li><li data-type='method'><a href="module-code.Code.html#.createNode">createNode</a></li><li data-type='method'><a href="module-code.Code.html#.appendNode">appendNode</a></li></ul></li><li><a href="module-conversion.module.exports.html">module.exports</a></li><li><a href="module-template-Template.html">Template</a><ul class='methods'><li data-type='method'><a href="module-template-Template.html#toHTML">toHTML</a></li><li data-type='method'><a href="module-template-Template.html#toBBCode">toBBCode</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-code.html">code</a></li><li><a href="module-conversion.html">conversion</a></li><li><a href="module-template.html">template</a></li></ul>
+</nav>
+
+<div id="main">
+    
+
+    
+
+
+
+    
+
+
+    <section class="package">
+        <h3> </h3>		
+    </section>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    <section class="readme usertext">
+        <article><h1 id="bbcode-parser-template">bbcode-parser-template</h1>
+<p>Template system for <a href="https://github.com/thoughtsunificator/bbcode-parser">bbcode-parser</a>.</p>
+<h2 id="getting-started">Getting started</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li><a href="https://github.com/thoughtsunificator/bbcode-parser">bbcode-parser</a></li>
+</ul>
+<h3 id="installing">Installing</h3>
+<p><code>npm install @thoughtsunificator/bbcode-parser-template</code></p>
+<h3 id="usage">Usage</h3>
+<h4 id="creating-a-code">Creating a Code</h4>
+<p><code>src/codes/b.js</code></p>
+<pre class="prettyprint source lang-javascript"><code>
+import { Code } from '@thoughtsunificator/bbcode-parser-template'
+import { BBElement } from '@thoughtsunificator/bbcode-parser'
+
+export default class extends Code {
+
+	/**
+		* @readonly
+		* @type {string}
+		*/
+	static tagName = &quot;b&quot;
+
+	/**
+		* @param {Node} node
+		* @returns {boolean}
+		*/
+	static testNode(node) {
+		return node.nodeName === &quot;SPAN&quot; && node.style.fontWeight === &quot;bold&quot;
+	}
+
+	/**
+		* @param {Conversion} conversion
+		* @returns {BBNode}
+		*/
+	static createBBNode(conversion) {
+		const bbNode = new BBElement(&quot;b&quot;)
+		return bbNode
+	}
+
+	/**
+		* @param {Conversion} conversion
+		* @returns {Node}
+		*/
+	static createNode(conversion) {
+		const node = document.createElement(&quot;span&quot;)
+		node.style.fontWeight = &quot;bold&quot;
+		return node
+	}
+
+}
+</code></pre>
+<h4 id="converting-bbcode-to-html-and-vice-versa">Converting BBCode to HTML and vice versa</h4>
+<p><code>src/app.js</code></p>
+<pre class="prettyprint source lang-javascript"><code>import { Template } from &quot;../lib/bbcode-parser-template/index.js&quot;
+import b from &quot;./codes/b.js&quot;
+
+const template = new Template([b], document)
+
+console.log(Template.toHTML(&quot;[b]Test[/b]&quot;)
+
+console.log(Template.toBBCode(`&lt;span style=&quot;font-weight: bold&quot;>Test&lt;/span>`)
+
+</code></pre>
+<h3 id="api">API</h3>
+<p>You can read the API by visiting <a href="https://thoughtsunificator.github.io/bbcode-parser-template">https://thoughtsunificator.github.io/bbcode-parser-template</a>.</p>
+<h2 id="example">Example</h2>
+<p>See <a href="https://github.com/thoughtsunificator/bbcode-parser-template-example">https://github.com/thoughtsunificator/bbcode-parser-template-example</a>.</p></article>
+    </section>
+
+
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on Sun Oct 03 2021 13:41:15 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+
+</body>
+</html>
