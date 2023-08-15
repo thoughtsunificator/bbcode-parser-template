@@ -77,7 +77,7 @@ console.log(Template.toBBCode(`<span style="font-weight: bold">Test</span>`)
 
 ### API
 
-You can read the API by visiting [https://thoughtsunificator.github.io/bbcode-parser-template](https://thoughtsunificator.github.io/bbcode-parser-template).
+You can read the API by visiting [http://bbcode-parser-template.unificator.me](http://bbcode-parser-template.unificator.me).
 
 ## Example
 
